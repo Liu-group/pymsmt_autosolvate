@@ -1,40 +1,18 @@
+from setuptools import setup, find_packages
 
-from distutils.core import setup
-import os
-import sys
 
-# Packages in MSMT toolkit
-packages = ['api', 'mcpb', 'lib', 'msmtmol', 'ipmach']
-
-# Modules
-modules = ['pymsmtexp', 'title']
-
-# Scripts
-scripts = ['msmttools/MCPB.py', 'msmttools/OptC4.py', 'msmttools/PdbSearcher.py',
-           'msmttools/espgen.py', 'msmttools/CartHess2FC.py', 'msmttools/IPMach.py']
-
-# See if our Python version will support OpenMM. Of the ParmEd-supported
-# Pythons, only 2.4 and 2.5 do not work with OpenMM
-major, minor = sys.version_info[:2]
-
-if __name__ == '__main__':
-
-    try:
-        from distutils.command.build_py import build_py_2to3 as build_py
-        from distutils.command.build_scripts import build_scripts_2to3 as build_scripts
-        PY3 = True
-    except ImportError:
-        from distutils.command.build_py import build_py
-        from distutils.command.build_scripts import build_scripts
-        PY3 = False
-
-    setup(name='pyMSMT',
-          version='15.0', # For AmberTools 15
-          description='Amber parameter file editor',
-          author='Pengfei Li',
-          author_email='ldsoar1990 -at- gmail.com',
-          license='GPL v2 or later',
-          packages=packages,
-          py_modules=modules,
-          cmdclass={'build_py':build_py, 'build_scripts':build_scripts},
-          scripts=scripts)
+setup(
+    name='pymsmt_orca',
+    version='0.1.0',
+    packages=find_packages(),
+    entry_points={
+        'console_scripts': [
+            'MCPB_orca=MCPB_orca.__main__:main',
+        ],
+    },
+    author='Sangni',
+    description='A brief description of your program',
+    install_requires=[
+        # 任何依赖项，例如：'numpy>=1.18.0',
+    ],
+)
