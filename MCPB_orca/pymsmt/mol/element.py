@@ -266,7 +266,7 @@ def get_ionljparadict(watermodel):
         monoljpara =  {
                     'Li1' : (1.321, 0.00641580, 'IOD set for Li+ ion for the OPC3 water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Na1' : (1.470, 0.03038310, 'IOD set for Na+ ion for the OPC3 water model from Sengupta et al., JCIM, 2021, 61, 869'),
-                    'K1 ' : (1.743, 0.16869420, 'IOD set for K+ ion for the OPC3 water model from Sengupta et al., JCIM, 2021, 61, 869'),
+                    'K1' : (1.743, 0.16869420, 'IOD set for K+ ion for the OPC3 water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Rb1' : (1.810, 0.22132374, 'IOD set for Rb+ ion for the OPC3 water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Cs1' : (1.990, 0.38035199, 'IOD set for Cs+ ion for the OPC3 water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Tl1' : (1.866, 0.26894857, 'IOD set for Tl+ ion for the OPC3 water model from Sengupta et al., JCIM, 2021, 61, 869'),
@@ -281,7 +281,7 @@ def get_ionljparadict(watermodel):
         monoljpara =  {
                     'Li1' : (1.305, 0.00523385, 'IOD set for Li+ ion for the OPC water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Na1' : (1.440, 0.02322071, 'IOD set for Na+ ion for the OPC water model from Sengupta et al., JCIM, 2021, 61, 869'),
-                    'K1 ' : (1.738, 0.16500296, 'IOD set for K+ ion for the OPC water model from Sengupta et al., JCIM, 2021, 61, 869'),
+                    'K1' : (1.738, 0.16500296, 'IOD set for K+ ion for the OPC water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Rb1' : (1.802, 0.21475916, 'IOD set for Rb+ ion for the OPC water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Cs1' : (1.990, 0.38035199, 'IOD set for Cs+ ion for the OPC water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Tl1' : (1.845, 0.25078000, 'IOD set for Tl+ ion for the OPC water model from Sengupta et al., JCIM, 2021, 61, 869'),
@@ -296,7 +296,7 @@ def get_ionljparadict(watermodel):
         monoljpara =  {
                     'Li1' : (1.320, 0.00633615, 'IOD set for Li+ ion for the TIP3P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Na1' : (1.460, 0.02784010, 'IOD set for Na+ ion for the TIP3P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
-                    'K1 ' : (1.741, 0.16721338, 'IOD set for K+ ion for the TIP3P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
+                    'K1' : (1.741, 0.16721338, 'IOD set for K+ ion for the TIP3P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Rb1' : (1.810, 0.22132374, 'IOD set for Rb+ ion for the TIP3P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Cs1' : (1.988, 0.37853483, 'IOD set for Cs+ ion for the TIP3P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Tl1' : (1.865, 0.26807617, 'IOD set for Tl+ ion for the TIP3P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
@@ -311,7 +311,7 @@ def get_ionljparadict(watermodel):
         monoljpara =  {
                     'Li1' : (1.306, 0.00530214, 'IOD set for Li+ ion for the TIP4P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Na1' : (1.450, 0.02545423, 'IOD set for Na+ ion for the TIP4P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
-                    'K1 ' : (1.737, 0.16426906, 'IOD set for K+ ion for the TIP4P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
+                    'K1' : (1.737, 0.16426906, 'IOD set for K+ ion for the TIP4P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Rb1' : (1.810, 0.22132374, 'IOD set for Rb+ ion for the TIP4P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Cs1' : (2.000, 0.38943250, 'IOD set for Cs+ ion for the TIP4P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
                     'Tl1' : (1.860, 0.26372453, 'IOD set for Tl+ ion for the TIP4P-FB water model from Sengupta et al., JCIM, 2021, 61, 869'),
