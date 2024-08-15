@@ -482,34 +482,38 @@ def gene_pre_frcmod_file(ionids, naamol2f, stpdbf, stfpf, smresf, prefcdf,
 
     for i in ionids:
         element = mol.atoms[i].element
+      #  print('@@@@@@@@@@@@@@@@@@@',element,i)
         chg = int(round(chargedict[mol.atoms[i].resname], 0))
+        print(chg)
         attyp2 = attypdict[i][1]
 
         rmin = None
         mnum = max([9-chg, chg])
         for j in range(0, mnum):
-
             fchg1 = chg - j
             fchg2 = chg + j
-
-            if j == 0 and element+str(fchg1) in list(IonLJParaDict.keys()):
-                rmin = IonLJParaDict[element + str(fchg1)][0]
-                ep = IonLJParaDict[element + str(fchg1)][1]
-                annot = IonLJParaDict[element + str(fchg1)][2]
+            key1 = element+str(fchg1)
+            key2 = element+str(fchg2)
+       
+            if j == 0 and key1 in list(IonLJParaDict.keys()):
+               # print(list(IonLJParaDict.keys()))
+                rmin = IonLJParaDict[key1][0]
+                ep = IonLJParaDict[key1][1]
+                annot = IonLJParaDict[key1][2]
                 break
-            elif fchg1 > 0 and element+str(fchg1) in list(IonLJParaDict.keys()):
+            elif fchg1 > 0 and key1 in list(IonLJParaDict.keys()):
                 print("Could not find VDW radius for element %s with charge "
                       "+%d, use the one of charge +%d" %(element, chg, fchg1))
-                rmin = IonLJParaDict[element + str(fchg1)][0]
-                ep = IonLJParaDict[element + str(fchg1)][1]
-                annot = IonLJParaDict[element + str(fchg1)][2]
+                rmin = IonLJParaDict[key1][0]
+                ep = IonLJParaDict[key1][1]
+                annot = IonLJParaDict[key1][2]
                 break
-            elif fchg2 <= 8 and element+str(fchg2) in list(IonLJParaDict.keys()):
+            elif fchg2 <= 8 and key2 in list(IonLJParaDict.keys()):
                 print("Could not find VDW radius for element %s with charge "
                       "+%d, use the one of charge +%d" %(element, chg, fchg2))
-                rmin = IonLJParaDict[element + str(fchg2)][0]
-                ep = IonLJParaDict[element + str(fchg2)][1]
-                annot = IonLJParaDict[element + str(fchg2)][2]
+                rmin = IonLJParaDict[key2][0]
+                ep = IonLJParaDict[key2][1]
+                annot = IonLJParaDict[key2][2]
                 break
 
         if rmin is None:
