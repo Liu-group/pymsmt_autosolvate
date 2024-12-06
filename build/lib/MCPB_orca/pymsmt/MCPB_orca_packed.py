@@ -548,7 +548,7 @@ def run_mcpb_orca(inputfile,step):
                 fcfchkf = gname + '_small_opt.orcaout'
                 print(fcfchkf,fclogf)
             elif g0x in ['terachem']:
-                print('start to use terachem results')
+                print('start to use terachem results!!!!!')
                 fclogf = gname + '_small_fc.out'
                 fcfchkf = gname + '_small_opt.out'
             gene_by_QM_fitting_sem(smpdbf, ionids, xstru, stfpf, prefcdf, finfcdf,

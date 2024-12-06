@@ -18,6 +18,7 @@ from ..mol.getlist import get_blist, get_mc_blist, get_alist
 from ..mol.gauio import (get_crds_from_fchk, get_matrix_from_fchk,
                            get_fc_from_log)
 from ..mol.orcaio import get_matrix_from_orca,get_crds_from_orca #!!!!!relatively import orcaio
+from ..mol.terachemio import get_matrix_from_terachem, get_crds_from_terachem #!!!!!relatively import terachemio
 from ..mol.gmsio import get_crds_from_gms, get_matrix_from_gms
 from ..mol.cal import calc_bond, calc_angle, calc_dih
 from ..mol.element import ionnamel
@@ -731,10 +732,13 @@ def gene_by_QM_fitting_sem(smpdbf, ionids, xstru, stfpf, pref, finf, chkfname,
     elif g0x == 'gms':
         crds = get_crds_from_gms(logfile)
     elif g0x in ['Orca','orca','ORCA']:
-        print('!!!!!!!!!!!!!!!0000000000000000')
         trjxyz = chkfname.split('.orcaout')[0] +'.orca_trj.xyz'
         print(trjxyz,chkfname)
         crds = get_crds_from_orca(trjxyz=trjxyz,orcaout=chkfname)
+    elif g0x in ['terachem']:
+        trjxyz = 'optim.xyz'
+        print(trjxyz,chkfname)
+        crds = get_crds_from_terachem(trjxyz=trjxyz,atomnumber=len(atids))
         
 
     crds0 = []
@@ -753,6 +757,10 @@ def gene_by_QM_fitting_sem(smpdbf, ionids, xstru, stfpf, pref, finf, chkfname,
         print(logfile)
         hessfile = logfile.split('.orcaout')[0] + '.orca.hess'
         fcmatrix = get_matrix_from_orca(hessfile, 3*len(atids))
+        print(fcmatrix.shape)
+    elif g0x in ['terachem']:
+        hessfile = logfile
+        fcmatrix = get_matrix_from_terachem(hessfile, 3*len(atids))
         print(fcmatrix.shape)
 
     natids = {}
